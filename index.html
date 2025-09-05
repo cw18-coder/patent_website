@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Intelligence Revolution | Patent Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .patent-info {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .section {
+            background: white;
+            margin: 40px 0;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .solution-flow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+            align-items: center;
+        }
+
+        .flow-step {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            color: #2c3e50;
+            position: relative;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .flow-step::after {
+            content: '→';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: #667eea;
+        }
+
+        .flow-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .model-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .model-card h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .model-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .feature-card h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .benefit-list {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .benefit-list h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .benefit-list ul {
+            list-style: none;
+        }
+
+        .benefit-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .benefit-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+            color: #2c3e50;
+            text-align: center;
+            padding: 60px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .cta-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 40px 30px;
+            }
+            
+            .solution-flow {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .flow-step::after {
+                display: none;
+            }
+            
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .future-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Manufacturing Intelligence Revolution</h1>
+                <p class="subtitle">From Regulatory Chaos to AI-Powered Clarity</p>
+                <div class="patent-info">
+                    <strong>US Patent 12,339,890 B2</strong><br>
+                    <em>Clarence Wong, Durgesh Nandini Das, Srikanth Ranganathan</em><br>
+                    Microsoft Technology Licensing, LLC
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Problem Section -->
+        <section class="section">
+            <h2>🎯 The Million-Dollar Problem</h2>
+            <p>Imagine launching a new electronic device across 50 countries. Each country has different regulations about materials, substance limits, and end-of-life disposal. Your suppliers send composition data in hundreds of formats—some in broken English, others using proprietary chemical names, many missing critical information entirely.</p>
+            
+            <p>This is the hidden crisis facing every global manufacturer today. Behind every smartphone, laptop, and IoT device lies a <span class="highlight">complex web of materials compliance</span> that can make or break a product launch.</p>
+
+            <div class="problem-stats">
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    Different country regulations to navigate
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100s</span>
+                    Data formats from suppliers
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$M</span>
+                    Potential losses from recalls & fines
+                </div>
+            </div>
+
+            <p><strong>Get it wrong:</strong> Recalls, fines, and banned products.<br>
+            <strong>Get it right manually:</strong> Drowning in spreadsheets and prayer.</p>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section">
+            <h2>🧩 Our Breakthrough Solution</h2>
+            <p>Our invention solved this problem by creating the <span class="highlight">first automated system</span> for classifying manufacturing parts based on their actual material composition—not what suppliers claim they contain.</p>
+
+            <div class="solution-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div>Ingest Messy Data</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div>AI Classification</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div>Quality Assurance</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div>Normalized Output</div>
+                </div>
+            </div>
+
+            <h3>The Three-Layer Strategy</h3>
+            <p>We realized no single approach could solve this puzzle. Instead, we built a sophisticated classification pipeline combining multiple techniques, each handling different aspects of the problem.</p>
+        </section>
+
+        <!-- Technical Approach -->
+        <section class="section">
+            <h2>⚡ Three AI Experts Working Together</h2>
+            <p>Rather than building one complex AI system, we created three specialized "experts" that collaborate:</p>
+
+            <div class="models-grid">
+                <div class="model-card" style="background: #f8f9fa !important; color: #2c3e50 !important;">
+                    <span class="model-icon">🔍</span>
+                    <h4>The Librarian</h4>
+                    <p><strong>Text Query Model</strong></p>
+                    <p>Treats our knowledge base like a digital library. Instantly searches thousands of known materials for exact or near-exact matches.</p>
+                </div>
+                <div class="model-card" style="background: #f8f9fa !important; color: #2c3e50 !important;">
+                    <span class="model-icon">🕵️</span>
+                    <h4>The Detective</h4>
+                    <p><strong>Regex Pattern Matcher</strong></p>
+                    <p>Learned thousands of industry patterns. Catches aluminum alloys starting with "Al", polymers with "PE" or "PP".</p>
+                </div>
+                <div class="model-card" style="background: #f8f9fa !important; color: #2c3e50 !important;">
+                    <span class="model-icon">🌍</span>
+                    <h4>The Translator</h4>
+                    <p><strong>NLP Nearest Neighbor</strong></p>
+                    <p>Understands that "acier inoxydable" (French) and "stainless steel" (English) refer to the same material family.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; font-style: italic; margin-top: 30px;">Each expert contributes their best guess, then we merge results using ensemble methods for maximum accuracy.</p>
+        </section>
+
+        <!-- Future Evolution -->
+        <section class="section">
+            <h2>🚀 The AI Evolution: From Processor to Copilot</h2>
+            <p>Having solved the core classification problem, we're now transforming our system into an intelligent AI agent that doesn't just classify materials—it converses with users, explains reasoning, and actively helps solve supply chain challenges.</p>
+
+            <div class="future-grid">
+                <div class="feature-card">
+                    <h4>💬 Natural Language Queries</h4>
+                    <p>"Show me all articles with more than 0.1% cobalt by mass that we shipped to Europe last quarter"</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🔍 Intelligent Explanations</h4>
+                    <p>"I classified this part as hazardous because it contains 0.15% lead, which exceeds the 0.1% threshold under RoHS regulations."</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📧 Supplier Communications</h4>
+                    <p>Auto-generate professional requests for missing composition data, then summarize supplier responses.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📋 Regulatory Change Interpreter</h4>
+                    <p>Plain-English summaries of how new regulations affect your products and what actions to take.</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 15px; margin-top: 30px; text-align: center;">
+                <h4 style="color: #2c3e50; margin-bottom: 15px;">Core Principle</h4>
+                <p style="color: #2c3e50; font-size: 1.2em; font-weight: 600;">AI enhances human expertise, never replaces it</p>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="section">
+            <h2>🌟 Manufacturing Intelligence Revolution</h2>
+            <p>What started as a solution to a specific compliance headache has evolved into something much larger: a blueprint for how AI can transform manufacturing intelligence.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-list">
+                    <h4>Who Benefits:</h4>
+                    <ul>
+                        <li>Global manufacturers with consistent compliance data</li>
+                        <li>Supply chain managers who can trust their BOM data</li>
+                        <li>Environmental teams working on sustainability</li>
+                        <li>Regulatory professionals avoiding compliance audits</li>
+                        <li>Consumers getting safer, more sustainable products</li>
+                    </ul>
+                </div>
+                <div class="benefit-list">
+                    <h4>The Transformation:</h4>
+                    <ul>
+                        <li>Democratization of expertise</li>
+                        <li>Proactive problem-solving</li>
+                        <li>Continuous learning systems</li>
+                        <li>Human-AI partnership model</li>
+                        <li>Scalable manufacturing intelligence</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>The Bigger Picture</h3>
+            <p>The manufacturing industry is at an inflection point. Supply chains are increasingly complex, regulations are multiplying, and sustainability requirements are becoming non-negotiable. The old approaches of manual data management and reactive compliance checking simply cannot scale.</p>
+
+            <p>Our solution proves that with the right combination of domain expertise, machine learning, and thoughtful AI integration, we can create systems that are both incredibly sophisticated and remarkably easy to use.</p>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>This is just the beginning.</h3>
+            <p style="font-size: 1.3em; margin-bottom: 30px;">The future of manufacturing isn't just automated—it's <strong>intelligently automated</strong>, with AI agents that understand context, explain their reasoning, and continuously learn from human expertise.</p>
+            <p>Ready to explore collaboration or licensing opportunities? Let's discuss how this breakthrough can transform your manufacturing intelligence.</p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

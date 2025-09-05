@@ -1,0 +1,1 @@
+Simple website providing an overview of the patent. For a more in depth understanding please refer to this [blog post](https://www.aina.clarencew.dev/p/from-regulatory-chaos-to-ai-powered).
